@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>BehAppy | Login</title>
-    <link href="Todo/css/todos.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="todos.css" media="all" rel="stylesheet" type="text/css"/>
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="Todo/js/underscore.js"></script>
+    <script src="underscore.js"></script>
     <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
-    <script src="Todo/js/todos.js"></script>
+    <script src="todos.js"></script>
   </head>
 
   <body>

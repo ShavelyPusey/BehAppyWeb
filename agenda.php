@@ -65,9 +65,9 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1446738830,byc:0,owlid
 <script type="text/javascript" src="http://livedemo00.template-help.com/drupal_54609/sites/all/themes/theme994/js/tm-parallax.js?nxc1y0"></script>
 
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="Todo/js/underscore.js"></script>
+    <script src="underscore.js"></script>
     <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
-    <script src="Todo/js/todos.js"></script>
+    <script src="todos.js"></script>
 
 
 <script type="text/javascript">
