@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<video width="320" height="240" controls>
+  <source src="VID-20150808-WA0000" type="video/mp4">
+</video>
+
+</body>
+</html>

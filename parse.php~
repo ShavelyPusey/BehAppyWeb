@@ -1,0 +1,93 @@
+<?php
+// define location of Parse PHP SDK, e.g. location in "Parse" folder
+// Defaults to ./Parse/ folder. Add trailing slash
+define( 'PARSE_SDK_DIR', './Parse/' );
+// include Parse SDK autoloader
+require_once( 'vendor/autoload.php' );
+// Add the "use" declarations where you'll be using the classes
+use Parse\ParseClient;
+use Parse\ParseObject;
+use Parse\ParseQuery;
+use Parse\ParseACL;
+use Parse\ParsePush;
+use Parse\ParseUser;
+use Parse\ParseInstallation;
+use Parse\ParseException;
+use Parse\ParseAnalytics;
+use Parse\ParseFile;
+use Parse\ParseCloud;
+// Init parse: app_id, rest_key, master_key
+ParseClient::initialize('JGwPKJ8ohU87Q3lEFIKAw15xRz3WO3SW4HBA3jIU', 'Ckv32WJtf0rumxNY3wEBG8Tz3Nt11Vo8djMkD8JR', 'r2QcSY0UwTogq9tMDjsEOWVPWp1KlCHxFh8l5P84');
+// save something to class TestObject
+//$testObject = ParseObject::create("TestObject");
+//$testObject->set("foo", "bar");
+//$testObject->save();
+
+
+
+
+$user = new ParseUser();
+$user->set("username", "Sha4");
+$user->set("password", "12345");
+$user->set("email", "SP2email@example.com");
+
+// other fields can be set just like with ParseObject
+
+try {
+  $user->signUp();
+echo "user created!";
+$currentUser = ParseUser::getCurrentUser();
+$query = ParseUser::query();
+$userAgain = $query->get($user->getObjectId());
+
+  
+} catch (ParseException $ex) {
+
+  echo "Error: " . $ex->getCode() . " " . $ex->getMessage();
+}
+
+
+
+/*$user = new ParseUser();
+$user->set("username", "Sha");
+$user->set("password", "m123");
+$user->set("email", "email@example.com");
+$user->save();
+$query = ParseUser::query();
+$userAgain = $query->get($user->getObjectId());*/
+
+
+/*$gameScore->set("score", 2000);
+$gameScore->set("playerName", "Shavely");
+$gameScore->set("cheatMode", true);
+
+try {
+  $gameScore->save();
+ // echo 'New object created with objectId: ' . $gameScore->getObjectId();
+} catch (ParseException $ex) {  
+  // Execute any logic that should take place if the save fails.
+  // error is a ParseException object with an error code and message.
+  echo 'Failed to create new object, with error message: ' . $ex->getMessage();
+}
+
+$query = new ParseQuery("GameScore");
+try {
+  $gameScore = $query->get("ooeuglfMPu");
+ 
+// The object was retrieved successfully.
+} catch (ParseException $ex) {
+  // The object was not retrieved successfully.
+  // error is a ParseException with an error code and message.
+}
+
+$score = $gameScore->get("score");
+echo 'Object Score: ' . $score;
+$playerName = $gameScore->get("playerName");
+echo 'Player name: ' . $playerName;
+
+$cheatMode = $gameScore->get("cheatMode");
+//echo $cheatMode;
+
+$gameScore->fetch();*/
+
+?>
